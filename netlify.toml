@@ -1,0 +1,11 @@
+# Netlify configuration
+[build]
+  publish = "."
+  command = "" # no build step for static HTML; set if you add a build
+
+# Redirects / form handling (Netlify picks up forms automatically when form-name present)
+[[redirects]]
+  from = "/.netlify/functions/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+  force = false
