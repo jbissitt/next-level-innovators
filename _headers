@@ -1,0 +1,11 @@
+/*
+  Security headers for Netlify. Adjust Content-Security-Policy (CSP) to your needs.
+  NOTE: This example allows inline styles/scripts for simplicity (because the page includes inline CSS/JS).
+  For production, move inline scripts/styles to external files and remove 'unsafe-inline' or use nonces.
+*/
+Content-Security-Policy: default-src 'self'; img-src 'self' data: https:; connect-src 'self' https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';
+Referrer-Policy: no-referrer-when-downgrade
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
